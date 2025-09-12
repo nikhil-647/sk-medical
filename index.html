@@ -3,114 +3,1026 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SK Medical Services</title>
+  
+  <!-- SEO Meta Tags -->
+  <title>SK Medical Services - Premium Refurbished Medical Equipment | MRI, CT Scan, Ultrasound</title>
+  <meta name="description" content="SK Medical Services provides high-quality refurbished medical diagnostic equipment including MRI, CT Scan, Ultrasound, X-Ray, and more. Trusted since 2017 with expert installation and service support across Maharashtra." />
+  <meta name="keywords" content="medical equipment, refurbished MRI, CT scan, ultrasound, x-ray, cathlab, diagnostic imaging, medical services, GE equipment, Siemens equipment, Maharashtra, Mumbai" />
+  <meta name="author" content="SK Medical Services" />
+  <meta name="robots" content="index, follow" />
+  
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="SK Medical Services - Premium Refurbished Medical Equipment" />
+  <meta property="og:description" content="Trusted provider of refurbished medical diagnostic equipment with expert service support across Maharashtra since 2017." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://skmedicalservices.com" />
+  <meta property="og:image" content="https://skmedicalservices.com/og-image.jpg" />
+  
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="SK Medical Services - Premium Refurbished Medical Equipment" />
+  <meta name="twitter:description" content="Trusted provider of refurbished medical diagnostic equipment with expert service support." />
+  
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MedicalBusiness",
+    "name": "SK Medical Services",
+    "description": "Provider of refurbished medical diagnostic equipment and services",
+    "url": "https://skmedicalservices.com",
+    "telephone": "+91-8956914346",
+    "email": "medicalservicessk@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Shop No. 018, Ground Floor, Pala Building, Empire Industrial Centrum, Kalyan-Badlapur Road",
+      "addressLocality": "Ambernath (W)",
+      "addressRegion": "Thane",
+      "postalCode": "421505",
+      "addressCountry": "IN"
+    },
+    "foundingDate": "2017",
+    "founder": {
+      "@type": "Person",
+      "name": "Sagar Khairnar"
+    }
+  }
+  </script>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Custom Styles -->
   <style>
-    body { font-family: 'Inter', sans-serif; }
+    body { 
+      font-family: 'Inter', sans-serif; 
+      scroll-behavior: smooth;
+    }
+    
+    /* Animation Classes */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.6s ease-out;
+    }
+    
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    
+    .slide-in-left {
+      opacity: 0;
+      transform: translateX(-50px);
+      transition: all 0.8s ease-out;
+    }
+    
+    .slide-in-left.visible {
+      opacity: 1;
+      transform: translateX(0);
+    }
+    
+    .slide-in-right {
+      opacity: 0;
+      transform: translateX(50px);
+      transition: all 0.8s ease-out;
+    }
+    
+    .slide-in-right.visible {
+      opacity: 1;
+      transform: translateX(0);
+    }
+    
+    .scale-in {
+      opacity: 0;
+      transform: scale(0.8);
+      transition: all 0.6s ease-out;
+    }
+    
+    .scale-in.visible {
+      opacity: 1;
+      transform: scale(1);
+    }
+    
+    /* Gradient Animations */
+    .gradient-bg {
+      background: linear-gradient(-45deg, #0A2F73, #2A72B5, #1E40AF, #3B82F6);
+      background-size: 400% 400%;
+      animation: gradientShift 15s ease infinite;
+    }
+    
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    
+    /* Hover Effects */
+    .hover-lift {
+      transition: all 0.3s ease;
+    }
+    
+    .hover-lift:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    }
+    
+    /* Loading Animation */
+    .pulse-dot {
+      animation: pulse 2s infinite;
+    }
+    
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.5; }
+    }
+    
+    /* Timeline Animation */
+    .timeline-item {
+      position: relative;
+      padding-left: 2rem;
+    }
+    
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0.5rem;
+      width: 12px;
+      height: 12px;
+      background: #2A72B5;
+      border-radius: 50%;
+      border: 3px solid white;
+      box-shadow: 0 0 0 3px #2A72B5;
+    }
+    
+    .timeline-item::after {
+      content: '';
+      position: absolute;
+      left: 5px;
+      top: 1.5rem;
+      width: 2px;
+      height: calc(100% + 1rem);
+      background: linear-gradient(to bottom, #2A72B5, transparent);
+    }
+    
+    .timeline-item:last-child::after {
+      display: none;
+    }
+    
+    /* Mobile Menu Animation */
+    .mobile-menu {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease-out;
+    }
+    
+    .mobile-menu.open {
+      max-height: 300px;
+    }
+    
+    /* Floating Action Button */
+    .fab {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      z-index: 1000;
+      animation: float 3s ease-in-out infinite;
+    }
+    
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+    }
+    
+    /* Equipment Grid Animation */
+    .equipment-item {
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .equipment-item::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+      transition: left 0.5s ease;
+    }
+    
+    .equipment-item:hover::before {
+      left: 100%;
+    }
+    
+    /* Smooth scrolling for older browsers */
+    @media (prefers-reduced-motion: no-preference) {
+      html {
+        scroll-behavior: smooth;
+      }
+    }
   </style>
 </head>
 <body class="bg-white text-gray-800">
 
   <!-- Navbar -->
-  <header class="bg-[#0A2F73] text-white shadow">
+  <header class="bg-[#0A2F73] text-white shadow-lg fixed w-full top-0 z-50 backdrop-blur-sm bg-opacity-95">
     <div class="container mx-auto flex justify-between items-center p-4">
-      <h1 class="text-xl font-bold">SK Medical Services</h1>
-      <nav class="space-x-6 hidden md:flex">
-        <a href="#about" class="hover:text-[#2A72B5]">About</a>
-        <a href="#services" class="hover:text-[#2A72B5]">Services</a>
-        <a href="#timeline" class="hover:text-[#2A72B5]">Timeline</a>
-        <a href="#team" class="hover:text-[#2A72B5]">Team</a>
-        <a href="#contact" class="hover:text-[#2A72B5]">Contact</a>
+      <h1 class="text-2xl font-bold fade-in visible">
+        <span class="text-white">SK</span>
+        <span class="text-[#2A72B5]">Medical</span>
+      </h1>
+      <nav class="space-x-8 hidden md:flex">
+        <a href="#about" class="hover:text-[#2A72B5] transition-colors duration-300 relative group">
+          About
+          <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#2A72B5] transition-all duration-300 group-hover:w-full"></span>
+        </a>
+        <a href="#equipment" class="hover:text-[#2A72B5] transition-colors duration-300 relative group">
+          Equipment
+          <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#2A72B5] transition-all duration-300 group-hover:w-full"></span>
+        </a>
+        <a href="#services" class="hover:text-[#2A72B5] transition-colors duration-300 relative group">
+          Services
+          <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#2A72B5] transition-all duration-300 group-hover:w-full"></span>
+        </a>
+        <a href="#timeline" class="hover:text-[#2A72B5] transition-colors duration-300 relative group">
+          Timeline
+          <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#2A72B5] transition-all duration-300 group-hover:w-full"></span>
+        </a>
+        <a href="#team" class="hover:text-[#2A72B5] transition-colors duration-300 relative group">
+          Team
+          <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#2A72B5] transition-all duration-300 group-hover:w-full"></span>
+        </a>
+        <a href="#contact" class="hover:text-[#2A72B5] transition-colors duration-300 relative group">
+          Contact
+          <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#2A72B5] transition-all duration-300 group-hover:w-full"></span>
+        </a>
       </nav>
+      <button class="md:hidden text-white" onclick="toggleMobileMenu()">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="mobile-menu md:hidden bg-[#0A2F73] border-t border-[#2A72B5]">
+      <div class="container mx-auto py-4 space-y-2">
+        <a href="#about" class="block px-4 py-2 hover:bg-[#2A72B5] transition-colors duration-300">About</a>
+        <a href="#equipment" class="block px-4 py-2 hover:bg-[#2A72B5] transition-colors duration-300">Equipment</a>
+        <a href="#services" class="block px-4 py-2 hover:bg-[#2A72B5] transition-colors duration-300">Services</a>
+        <a href="#timeline" class="block px-4 py-2 hover:bg-[#2A72B5] transition-colors duration-300">Timeline</a>
+        <a href="#team" class="block px-4 py-2 hover:bg-[#2A72B5] transition-colors duration-300">Team</a>
+        <a href="#contact" class="block px-4 py-2 hover:bg-[#2A72B5] transition-colors duration-300">Contact</a>
+      </div>
     </div>
   </header>
 
   <!-- Hero -->
-  <section class="bg-[#2A72B5] text-white text-center py-20">
-    <h2 class="text-4xl font-bold mb-4">Reliable Diagnostic Imaging Solutions</h2>
-    <p class="max-w-2xl mx-auto mb-6">
-      Providing high-quality refurbished medical equipment and after-sales support since 2017.
-    </p>
-    <a href="#contact" class="bg-white text-[#0A2F73] px-6 py-3 rounded-lg font-semibold shadow hover:bg-gray-100">Get in Touch</a>
+  <section class="gradient-bg text-white text-center py-32 mt-16 relative overflow-hidden">
+    <div class="absolute inset-0 bg-black bg-opacity-20"></div>
+    <div class="relative z-10 container mx-auto px-6">
+      <h2 class="text-5xl md:text-7xl font-bold mb-6 fade-in">
+        Reliable Diagnostic<br>
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-200 to-white">Imaging Solutions</span>
+      </h2>
+      <p class="max-w-3xl mx-auto mb-8 text-xl text-blue-100 fade-in">
+        Providing high-quality refurbished medical equipment and comprehensive after-sales support since 2017. 
+        Trusted by healthcare providers across Maharashtra.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center items-center fade-in">
+        <a href="#contact" class="bg-white text-[#0A2F73] px-8 py-4 rounded-full font-semibold shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300">
+          Get Quote Now
+        </a>
+        <a href="#equipment" class="border-2 border-white text-white px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-[#0A2F73] transition-all duration-300">
+          View Equipment
+        </a>
+      </div>
+    </div>
+    <!-- Floating particles -->
+    <div class="absolute top-20 left-10 w-4 h-4 bg-white bg-opacity-20 rounded-full pulse-dot"></div>
+    <div class="absolute top-40 right-20 w-6 h-6 bg-white bg-opacity-30 rounded-full pulse-dot" style="animation-delay: 1s;"></div>
+    <div class="absolute bottom-20 left-1/4 w-3 h-3 bg-white bg-opacity-25 rounded-full pulse-dot" style="animation-delay: 2s;"></div>
+  </section>
+
+  <!-- Equipment Section -->
+  <section id="equipment" class="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
+    <div class="container mx-auto px-6">
+      <div class="text-center mb-16">
+        <h3 class="text-4xl font-bold text-[#0A2F73] mb-4 fade-in">Medical Equipment & Services</h3>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto fade-in">
+          Comprehensive range of refurbished diagnostic imaging equipment from leading manufacturers
+        </p>
+      </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="equipment-item bg-white p-6 rounded-2xl shadow-lg hover-lift scale-in">
+          <div class="w-16 h-16 bg-gradient-to-br from-[#0A2F73] to-[#2A72B5] rounded-xl flex items-center justify-center mb-4">
+            <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+          </div>
+          <h4 class="font-bold text-lg mb-2">MRI</h4>
+          <p class="text-gray-600 text-sm">Magnetic Resonance Imaging systems</p>
+        </div>
+        <div class="equipment-item bg-white p-6 rounded-2xl shadow-lg hover-lift scale-in" style="animation-delay: 0.1s;">
+          <div class="w-16 h-16 bg-gradient-to-br from-[#0A2F73] to-[#2A72B5] rounded-xl flex items-center justify-center mb-4">
+            <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+          </div>
+          <h4 class="font-bold text-lg mb-2">CT Scan</h4>
+          <p class="text-gray-600 text-sm">Computed Tomography scanners</p>
+        </div>
+        <div class="equipment-item bg-white p-6 rounded-2xl shadow-lg hover-lift scale-in" style="animation-delay: 0.2s;">
+          <div class="w-16 h-16 bg-gradient-to-br from-[#0A2F73] to-[#2A72B5] rounded-xl flex items-center justify-center mb-4">
+            <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+          </div>
+          <h4 class="font-bold text-lg mb-2">Cathlab</h4>
+          <p class="text-gray-600 text-sm">Cardiac catheterization labs</p>
+        </div>
+        <div class="equipment-item bg-white p-6 rounded-2xl shadow-lg hover-lift scale-in" style="animation-delay: 0.3s;">
+          <div class="w-16 h-16 bg-gradient-to-br from-[#0A2F73] to-[#2A72B5] rounded-xl flex items-center justify-center mb-4">
+            <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+          </div>
+          <h4 class="font-bold text-lg mb-2">Ultrasound</h4>
+          <p class="text-gray-600 text-sm">Diagnostic ultrasound systems</p>
+        </div>
+        <div class="equipment-item bg-white p-6 rounded-2xl shadow-lg hover-lift scale-in" style="animation-delay: 0.4s;">
+          <div class="w-16 h-16 bg-gradient-to-br from-[#0A2F73] to-[#2A72B5] rounded-xl flex items-center justify-center mb-4">
+            <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+          </div>
+          <h4 class="font-bold text-lg mb-2">X-Ray</h4>
+          <p class="text-gray-600 text-sm">Digital & analog X-ray systems</p>
+        </div>
+        <div class="equipment-item bg-white p-6 rounded-2xl shadow-lg hover-lift scale-in" style="animation-delay: 0.5s;">
+          <div class="w-16 h-16 bg-gradient-to-br from-[#0A2F73] to-[#2A72B5] rounded-xl flex items-center justify-center mb-4">
+            <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+          </div>
+          <h4 class="font-bold text-lg mb-2">C-ARM</h4>
+          <p class="text-gray-600 text-sm">Mobile C-arm imaging systems</p>
+        </div>
+        <div class="equipment-item bg-white p-6 rounded-2xl shadow-lg hover-lift scale-in" style="animation-delay: 0.6s;">
+          <div class="w-16 h-16 bg-gradient-to-br from-[#0A2F73] to-[#2A72B5] rounded-xl flex items-center justify-center mb-4">
+            <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+          </div>
+          <h4 class="font-bold text-lg mb-2">PET CT</h4>
+          <p class="text-gray-600 text-sm">Positron Emission Tomography</p>
+        </div>
+        <div class="equipment-item bg-white p-6 rounded-2xl shadow-lg hover-lift scale-in" style="animation-delay: 0.7s;">
+          <div class="w-16 h-16 bg-gradient-to-br from-[#0A2F73] to-[#2A72B5] rounded-xl flex items-center justify-center mb-4">
+            <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+          </div>
+          <h4 class="font-bold text-lg mb-2">Mammography</h4>
+          <p class="text-gray-600 text-sm">Breast imaging systems</p>
+        </div>
+      </div>
+    </div>
   </section>
 
   <!-- About -->
-  <section id="about" class="py-16 container mx-auto px-6">
-    <h3 class="text-3xl font-bold text-center text-[#0A2F73] mb-6">About Us</h3>
-    <p class="text-center max-w-3xl mx-auto text-gray-700">
-      SK Medical Services is a reputed company in the Medical Diagnostic Equipment industry. 
-      We specialize in GE refurbished and pre-owned equipment like CT, MRI, PET CT, Ultrasound, X-Ray, and more. 
-      Established in 2017, we are committed to offering affordable, high-quality solutions to support healthcare in remote areas.
-    </p>
+  <section id="about" class="py-20">
+    <div class="container mx-auto px-6">
+      <div class="text-center mb-16">
+        <h3 class="text-4xl font-bold text-[#0A2F73] mb-6 fade-in">About SK Medical Services</h3>
+        <p class="text-xl text-gray-600 max-w-4xl mx-auto fade-in">
+          A trusted name in medical diagnostic equipment since 2017
+        </p>
+      </div>
+      
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <div class="slide-in-left">
+          <h4 class="text-2xl font-bold text-[#0A2F73] mb-6">Our Story</h4>
+          <p class="text-gray-700 mb-6 leading-relaxed">
+            SK Medical Services is a reputed company in the Medical Diagnostic Equipment industry. Promoted by highly skilled professionals, we deal in GE refurbished and pre-owned Diagnostic Imaging Equipment such as CT, PET CT, Nuclear Medicine, MRI, Cath Lab, AW Workstation, Mammography, C-Arm, Ultrasound and BMD.
+          </p>
+          <p class="text-gray-700 mb-6 leading-relaxed">
+            We also offer turnkey after-sales service and quality spare parts for this equipment. Another key differentiator that sets us apart is our long-standing association and partnerships with other leading companies across the world to procure spare parts for GE Diagnostic Imaging equipment.
+          </p>
+          
+          <div class="bg-gradient-to-r from-[#0A2F73] to-[#2A72B5] text-white p-6 rounded-2xl">
+            <h5 class="text-xl font-bold mb-3">Our Vision</h5>
+            <p class="text-blue-100">
+              To help support vision of providing quality healthcare in remote areas of country by extending life span of old imaging equipment and thus offering lower costs for imaging equipment.
+            </p>
+          </div>
+        </div>
+        
+        <div class="slide-in-right">
+          <div class="bg-white p-8 rounded-3xl shadow-2xl">
+            <h4 class="text-2xl font-bold text-[#0A2F73] mb-6">Why Choose Us?</h4>
+            <div class="space-y-4">
+              <div class="flex items-start space-x-4">
+                <div class="w-8 h-8 bg-[#2A72B5] rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                  <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+                  </svg>
+                </div>
+                <div>
+                  <h5 class="font-semibold text-gray-800">Trusted Since 2017</h5>
+                  <p class="text-gray-600 text-sm">Years of experience in medical equipment industry</p>
+                </div>
+              </div>
+              <div class="flex items-start space-x-4">
+                <div class="w-8 h-8 bg-[#2A72B5] rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                  <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+                  </svg>
+                </div>
+                <div>
+                  <h5 class="font-semibold text-gray-800">Global Partnerships</h5>
+                  <p class="text-gray-600 text-sm">Strong network for spare parts procurement</p>
+                </div>
+              </div>
+              <div class="flex items-start space-x-4">
+                <div class="w-8 h-8 bg-[#2A72B5] rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                  <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+                  </svg>
+                </div>
+                <div>
+                  <h5 class="font-semibold text-gray-800">Expert Team</h5>
+                  <p class="text-gray-600 text-sm">OEM trained and certified engineers</p>
+                </div>
+              </div>
+              <div class="flex items-start space-x-4">
+                <div class="w-8 h-8 bg-[#2A72B5] rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                  <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+                  </svg>
+                </div>
+                <div>
+                  <h5 class="font-semibold text-gray-800">Affordable Solutions</h5>
+                  <p class="text-gray-600 text-sm">Cost-effective healthcare equipment solutions</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="text-center mt-16">
+        <blockquote class="text-2xl font-medium text-[#0A2F73] italic fade-in">
+          "If you don't take care of your customer, somebody else will."
+        </blockquote>
+        <p class="text-gray-600 mt-2 fade-in">- Company Principle</p>
+      </div>
+    </div>
   </section>
 
   <!-- Services -->
-  <section id="services" class="bg-gray-50 py-16">
+  <section id="services" class="bg-gradient-to-br from-gray-50 to-blue-50 py-20">
     <div class="container mx-auto px-6">
-      <h3 class="text-3xl font-bold text-center text-[#0A2F73] mb-10">Our Services</h3>
-      <div class="grid md:grid-cols-3 gap-8">
-        <div class="p-6 bg-white rounded-xl shadow hover:shadow-lg">
-          <h4 class="font-semibold text-lg mb-2">Diagnostic Equipment</h4>
-          <p>CT, MRI, PET CT, Cathlab, Ultrasound, X-Ray, DR, CR System.</p>
+      <div class="text-center mb-16">
+        <h3 class="text-4xl font-bold text-[#0A2F73] mb-6 fade-in">Our Comprehensive Services</h3>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto fade-in">
+          Complete solutions from equipment procurement to ongoing support
+        </p>
+      </div>
+      
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="bg-white p-8 rounded-2xl shadow-lg hover-lift scale-in">
+          <div class="w-16 h-16 bg-gradient-to-br from-[#0A2F73] to-[#2A72B5] rounded-2xl flex items-center justify-center mb-6">
+            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/>
+            </svg>
+          </div>
+          <h4 class="text-xl font-bold text-[#0A2F73] mb-4">Large Array of Parts</h4>
+          <p class="text-gray-600 leading-relaxed">
+            Timely dispatch and delivery of spare parts with range from X-Ray tubes to circuit boards, power supplies, system cables and more.
+          </p>
         </div>
-        <div class="p-6 bg-white rounded-xl shadow hover:shadow-lg">
-          <h4 class="font-semibold text-lg mb-2">Turnkey Solutions</h4>
-          <p>From project planning to installation, training, and support.</p>
+        
+        <div class="bg-white p-8 rounded-2xl shadow-lg hover-lift scale-in" style="animation-delay: 0.1s;">
+          <div class="w-16 h-16 bg-gradient-to-br from-[#0A2F73] to-[#2A72B5] rounded-2xl flex items-center justify-center mb-6">
+            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/>
+            </svg>
+          </div>
+          <h4 class="text-xl font-bold text-[#0A2F73] mb-4">Total Turnkey Solutions</h4>
+          <p class="text-gray-600 leading-relaxed">
+            From project conception, planning and purchase to installation, system setup and service contracts, SK Medical can take care of it all.
+          </p>
         </div>
-        <div class="p-6 bg-white rounded-xl shadow hover:shadow-lg">
-          <h4 class="font-semibold text-lg mb-2">After-Sales & Warranty</h4>
-          <p>Customized service contracts, OEM-trained engineers, and spare parts.</p>
+        
+        <div class="bg-white p-8 rounded-2xl shadow-lg hover-lift scale-in" style="animation-delay: 0.2s;">
+          <div class="w-16 h-16 bg-gradient-to-br from-[#0A2F73] to-[#2A72B5] rounded-2xl flex items-center justify-center mb-6">
+            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+            </svg>
+          </div>
+          <h4 class="text-xl font-bold text-[#0A2F73] mb-4">Application Training</h4>
+          <p class="text-gray-600 leading-relaxed">
+            After installation, we offer training to our users so that they are comfortable and competent with new equipment.
+          </p>
+        </div>
+        
+        <div class="bg-white p-8 rounded-2xl shadow-lg hover-lift scale-in" style="animation-delay: 0.3s;">
+          <div class="w-16 h-16 bg-gradient-to-br from-[#0A2F73] to-[#2A72B5] rounded-2xl flex items-center justify-center mb-6">
+            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+            </svg>
+          </div>
+          <h4 class="text-xl font-bold text-[#0A2F73] mb-4">Service and Warranty</h4>
+          <p class="text-gray-600 leading-relaxed">
+            Our service plans and warranties afford smooth operation and peace of mind for all your medical equipment needs.
+          </p>
+        </div>
+        
+        <div class="bg-white p-8 rounded-2xl shadow-lg hover-lift scale-in" style="animation-delay: 0.4s;">
+          <div class="w-16 h-16 bg-gradient-to-br from-[#0A2F73] to-[#2A72B5] rounded-2xl flex items-center justify-center mb-6">
+            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+            </svg>
+          </div>
+          <h4 class="text-xl font-bold text-[#0A2F73] mb-4">Customized Service Contracts</h4>
+          <p class="text-gray-600 leading-relaxed">
+            SK Medical is equipped with OEM trained and certified engineers that allow us to offer service contracts specific to individual needs.
+          </p>
+        </div>
+        
+        <div class="bg-white p-8 rounded-2xl shadow-lg hover-lift scale-in" style="animation-delay: 0.5s;">
+          <div class="w-16 h-16 bg-gradient-to-br from-[#0A2F73] to-[#2A72B5] rounded-2xl flex items-center justify-center mb-6">
+            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"/>
+            </svg>
+          </div>
+          <h4 class="text-xl font-bold text-[#0A2F73] mb-4">Equipment Installation & Relocation</h4>
+          <p class="text-gray-600 leading-relaxed">
+            Engineers and crew trained for specific instruments handle installation and ensure it is done within prescribed timelines and operation is glitch-free.
+          </p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Timeline -->
-  <section id="timeline" class="py-16 container mx-auto px-6">
-    <h3 class="text-3xl font-bold text-center text-[#0A2F73] mb-10">Our Journey</h3>
-    <ul class="space-y-6">
-      <li><span class="font-bold text-[#2A72B5]">2017:</span> SK Medical Services established as sales & service provider of imaging equipment.</li>
-      <li><span class="font-bold text-[#2A72B5]">2018:</span> Partnered with Unicare Medical for cardiac equipment.</li>
-      <li><span class="font-bold text-[#2A72B5]">2019:</span> Philips MRI partnership in Mumbai.</li>
-      <li><span class="font-bold text-[#2A72B5]">2020:</span> Siemens CT & Cathlab partnerships, ventilator installations during COVID-19.</li>
-    </ul>
+  <section id="timeline" class="py-20">
+    <div class="container mx-auto px-6">
+      <div class="text-center mb-16">
+        <h3 class="text-4xl font-bold text-[#0A2F73] mb-6 fade-in">Company History & Milestones</h3>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto fade-in">
+          Our journey of growth and partnerships in the medical equipment industry
+        </p>
+      </div>
+      
+      <div class="max-w-4xl mx-auto">
+        <div class="space-y-8">
+          <div class="timeline-item fade-in">
+            <div class="bg-white p-6 rounded-2xl shadow-lg hover-lift">
+              <div class="flex items-center mb-4">
+                <span class="text-2xl font-bold text-[#2A72B5] mr-4">2017</span>
+                <div class="h-px bg-gradient-to-r from-[#2A72B5] to-transparent flex-1"></div>
+              </div>
+              <p class="text-gray-700 leading-relaxed">
+                SK Medical Services established as sales and service provider of Radiology and Imaging equipment's of multiple modalities like CT Scan, Cathlab, MRI, C-arm, CR System and X-ray etc.
+              </p>
+            </div>
+          </div>
+          
+          <div class="timeline-item fade-in" style="animation-delay: 0.1s;">
+            <div class="bg-white p-6 rounded-2xl shadow-lg hover-lift">
+              <div class="flex items-center mb-4">
+                <span class="text-2xl font-bold text-[#2A72B5] mr-4">2018</span>
+                <div class="h-px bg-gradient-to-r from-[#2A72B5] to-transparent flex-1"></div>
+              </div>
+              <p class="text-gray-700 leading-relaxed">
+                Started working as Sales & Service partner for UNICARE MEDICAL SYSTEM for imported cardiac equipment's like heart Lung machine, Anesthesia, defibrillator with total Cardiac OT setup.
+              </p>
+            </div>
+          </div>
+          
+          <div class="timeline-item fade-in" style="animation-delay: 0.2s;">
+            <div class="bg-white p-6 rounded-2xl shadow-lg hover-lift">
+              <div class="flex items-center mb-4">
+                <span class="text-2xl font-bold text-[#2A72B5] mr-4">2019</span>
+                <div class="h-px bg-gradient-to-r from-[#2A72B5] to-transparent flex-1"></div>
+              </div>
+              <p class="text-gray-700 leading-relaxed">
+                Started working as sales & service partner for NEW GEN MEDICAL SYSTEM for PHILIPS MRI channel partnership in Mumbai.
+              </p>
+            </div>
+          </div>
+          
+          <div class="timeline-item fade-in" style="animation-delay: 0.3s;">
+            <div class="bg-white p-6 rounded-2xl shadow-lg hover-lift">
+              <div class="flex items-center mb-4">
+                <span class="text-2xl font-bold text-[#2A72B5] mr-4">2020</span>
+                <div class="h-px bg-gradient-to-r from-[#2A72B5] to-transparent flex-1"></div>
+              </div>
+              <div class="space-y-4">
+                <p class="text-gray-700 leading-relaxed">
+                  Started working as sales & service partner for Edge Medical Services for SIEMENS CT Scan & CATHLAB partnership in Maharashtra.
+                </p>
+                <p class="text-gray-700 leading-relaxed">
+                  Started working as sales & service partner for SUNRAYS MASTERS MEDICAL SYSTEM for SIEMENS CATHLAB and Philips CT channel partnership in Maharashtra.
+                </p>
+                <p class="text-gray-700 leading-relaxed">
+                  Bharat Electronics and AEONMED ventilator installation done at time of Covid-19 Lockdown Period in all over Maharashtra with <strong>35,000 ventilator installations</strong> & still service support for ventilators on call facilities given to them.
+                </p>
+                <p class="text-gray-700 leading-relaxed">
+                  Merged with Genesis Medical System, Aurangabad for Marathwada Region partner.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 
   <!-- Team -->
-  <section id="team" class="bg-gray-50 py-16">
+  <section id="team" class="bg-gradient-to-br from-gray-50 to-blue-50 py-20">
     <div class="container mx-auto px-6">
-      <h3 class="text-3xl font-bold text-center text-[#0A2F73] mb-10">Our Team</h3>
-      <div class="grid md:grid-cols-3 gap-8 text-center">
-        <div class="p-6 bg-white rounded-xl shadow hover:shadow-lg">
-          <h4 class="font-semibold text-lg">Sagar Khairnar</h4>
-          <p class="text-gray-600">Director</p>
+      <div class="text-center mb-16">
+        <h3 class="text-4xl font-bold text-[#0A2F73] mb-6 fade-in">Our Expert Team</h3>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto fade-in">
+          Experienced professionals dedicated to providing exceptional medical equipment services
+        </p>
+      </div>
+      
+      <!-- Leadership Team -->
+      <div class="mb-16">
+        <h4 class="text-2xl font-bold text-[#0A2F73] text-center mb-8 fade-in">Leadership</h4>
+        <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          <div class="bg-white p-8 rounded-2xl shadow-lg hover-lift scale-in text-center">
+            <div class="w-24 h-24 bg-gradient-to-br from-[#0A2F73] to-[#2A72B5] rounded-full flex items-center justify-center mx-auto mb-6">
+              <span class="text-2xl font-bold text-white">SK</span>
+            </div>
+            <h5 class="text-xl font-bold text-[#0A2F73] mb-2">Sagar Khairnar</h5>
+            <p class="text-[#2A72B5] font-semibold mb-4">Director & Founder</p>
+            <p class="text-gray-600 text-sm mb-4">Mumbai | 12 Years Experience</p>
+            <div class="text-left space-y-2 text-sm text-gray-600">
+              <p>• Electronic and Telecommunication from Mumbai University</p>
+              <p>• Former CT Service Engineer at Sai Medical Service Nashik</p>
+              <p>• Ex-Sr. Service Engineer at MIS Healthcare Pvt Ltd Pune</p>
+              <p>• Former RTS In-charge at Faber Sindoori Management Services</p>
+            </div>
+          </div>
+          
+          <div class="bg-white p-8 rounded-2xl shadow-lg hover-lift scale-in text-center" style="animation-delay: 0.1s;">
+            <div class="w-24 h-24 bg-gradient-to-br from-[#0A2F73] to-[#2A72B5] rounded-full flex items-center justify-center mx-auto mb-6">
+              <span class="text-2xl font-bold text-white">SK</span>
+            </div>
+            <h5 class="text-xl font-bold text-[#0A2F73] mb-2">Savita Khairnar</h5>
+            <p class="text-[#2A72B5] font-semibold mb-4">Co-Founder</p>
+            <p class="text-gray-600 text-sm mb-4">Mumbai | 9 Years Experience</p>
+            <div class="text-left space-y-2 text-sm text-gray-600">
+              <p>• Coordinator for Mumbai and Maharashtra PMS & Breakdown Calls</p>
+              <p>• Service Calls and Handling Admin Work</p>
+              <p>• Sales Coordination</p>
+            </div>
+          </div>
         </div>
-        <div class="p-6 bg-white rounded-xl shadow hover:shadow-lg">
-          <h4 class="font-semibold text-lg">Savita Khairnar</h4>
-          <p class="text-gray-600">Co-Founder</p>
-        </div>
-        <div class="p-6 bg-white rounded-xl shadow hover:shadow-lg">
-          <h4 class="font-semibold text-lg">Akshay Sable</h4>
-          <p class="text-gray-600">Biomedical Engineer</p>
+      </div>
+      
+      <!-- Technical Team -->
+      <div>
+        <h4 class="text-2xl font-bold text-[#0A2F73] text-center mb-8 fade-in">Technical Specialists</h4>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div class="bg-white p-6 rounded-2xl shadow-lg hover-lift scale-in">
+            <h5 class="font-bold text-lg text-[#0A2F73] mb-2">Akshay Sable</h5>
+            <p class="text-[#2A72B5] font-semibold mb-2">Senior Service Engineer</p>
+            <p class="text-gray-600 text-sm mb-3">Nashik | 5 Years Experience</p>
+            <p class="text-gray-600 text-sm">Specializes in GE & Siemens CT Scan, Fuji & AGFA CR System, X-Ray Basic & Advanced, Local C Arm, Ultrasound</p>
+          </div>
+          
+          <div class="bg-white p-6 rounded-2xl shadow-lg hover-lift scale-in" style="animation-delay: 0.1s;">
+            <h5 class="font-bold text-lg text-[#0A2F73] mb-2">Yogesh Kolte</h5>
+            <p class="text-[#2A72B5] font-semibold mb-2">Senior Service Engineer</p>
+            <p class="text-gray-600 text-sm mb-3">Mumbai | 4 Years Experience</p>
+            <p class="text-gray-600 text-sm">Service Engineer for CR System, CT Scan & Cathlab</p>
+          </div>
+          
+          <div class="bg-white p-6 rounded-2xl shadow-lg hover-lift scale-in" style="animation-delay: 0.2s;">
+            <h5 class="font-bold text-lg text-[#0A2F73] mb-2">Prashant Pagare</h5>
+            <p class="text-[#2A72B5] font-semibold mb-2">Mechanical Specialist</p>
+            <p class="text-gray-600 text-sm mb-3">Maharashtra | 8 Years Experience</p>
+            <p class="text-gray-600 text-sm">MRI Specialist and CT GE, Siemens Specialist mechanical Installation & support</p>
+          </div>
+          
+          <div class="bg-white p-6 rounded-2xl shadow-lg hover-lift scale-in" style="animation-delay: 0.3s;">
+            <h5 class="font-bold text-lg text-[#0A2F73] mb-2">Yuvraj Kolambe</h5>
+            <p class="text-[#2A72B5] font-semibold mb-2">Service Engineer</p>
+            <p class="text-gray-600 text-sm mb-3">Mumbai | 1 Year Experience</p>
+            <p class="text-gray-600 text-sm">X-Ray Specialist: 100mA to 500mA X-Ray Machine, C Arm, GE & Siemens CT scan, Konica CR System</p>
+          </div>
+          
+          <div class="bg-white p-6 rounded-2xl shadow-lg hover-lift scale-in" style="animation-delay: 0.4s;">
+            <h5 class="font-bold text-lg text-[#0A2F73] mb-2">Hemraj Mali</h5>
+            <p class="text-[#2A72B5] font-semibold mb-2">Application Specialist</p>
+            <p class="text-gray-600 text-sm mb-3">Mumbai | 8 Years Experience</p>
+            <p class="text-gray-600 text-sm">Application specialist in CT scan, MRI</p>
+          </div>
+          
+          <div class="bg-white p-6 rounded-2xl shadow-lg hover-lift scale-in" style="animation-delay: 0.5s;">
+            <h5 class="font-bold text-lg text-[#0A2F73] mb-2">Swapnil Pawar</h5>
+            <p class="text-[#2A72B5] font-semibold mb-2">Senior Service Engineer</p>
+            <p class="text-gray-600 text-sm mb-3">Aurangabad | 5 Years Experience</p>
+            <p class="text-gray-600 text-sm">Regional service specialist for Marathwada region</p>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Contact -->
-  <section id="contact" class="py-16 container mx-auto px-6">
-    <h3 class="text-3xl font-bold text-center text-[#0A2F73] mb-10">Contact Us</h3>
-    <div class="text-center space-y-4">
-      <p><strong>Office:</strong> Shop No. 018, Ground Floor, Pala Building, Empire Industrial Centrum, Ambernath (W), Thane - 421505</p>
-      <p><strong>Email:</strong> <a href="mailto:medicalservicessk@gmail.com" class="text-[#2A72B5]">medicalservicessk@gmail.com</a></p>
-      <p><strong>Phone:</strong> +91 8956914346 | +91 8956914355</p>
+  <section id="contact" class="py-20 bg-gradient-to-br from-[#0A2F73] to-[#2A72B5] text-white">
+    <div class="container mx-auto px-6">
+      <div class="text-center mb-16">
+        <h3 class="text-4xl font-bold mb-6 fade-in">Get In Touch</h3>
+        <p class="text-xl text-blue-100 max-w-3xl mx-auto fade-in">
+          Ready to discuss your medical equipment needs? Contact our expert team today.
+        </p>
+      </div>
+      
+      <div class="grid lg:grid-cols-2 gap-12 items-start">
+        <div class="slide-in-left">
+          <h4 class="text-2xl font-bold mb-8">Contact Information</h4>
+          
+          <!-- Head Office -->
+          <div class="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-2xl mb-6">
+            <h5 class="text-xl font-bold mb-4 text-blue-100">Head Office</h5>
+            <div class="space-y-3">
+              <div class="flex items-start space-x-3">
+                <svg class="w-5 h-5 text-blue-200 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
+                </svg>
+                <div>
+                  <p class="text-blue-100">Shop No. 018, Ground Floor, Pala Building</p>
+                  <p class="text-blue-100">Empire Industrial Centrum</p>
+                  <p class="text-blue-100">Kalyan-Badlapur Road, Ambernath (W)</p>
+                  <p class="text-blue-100">Thane - 421 505</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Contact Details -->
+          <div class="space-y-4">
+            <div class="flex items-center space-x-3">
+              <svg class="w-5 h-5 text-blue-200" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
+                <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
+              </svg>
+              <a href="mailto:medicalservicessk@gmail.com" class="text-blue-100 hover:text-white transition-colors">
+                medicalservicessk@gmail.com
+              </a>
+            </div>
+            
+            <div class="flex items-center space-x-3">
+              <svg class="w-5 h-5 text-blue-200" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+              </svg>
+              <div class="text-blue-100">
+                <p>Sagar Khairnar: <a href="tel:+918956914346" class="hover:text-white transition-colors">+91 8956914346</a></p>
+                <p>Savita Khairnar: <a href="tel:+918956914355" class="hover:text-white transition-colors">+91 8956914355</a></p>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Warehouses -->
+          <div class="mt-8">
+            <h5 class="text-xl font-bold mb-4 text-blue-100">Warehouse Locations</h5>
+            <div class="space-y-3 text-sm text-blue-200">
+              <p><strong>Warehouse 1:</strong> Shop No. 010-D, Ground Floor, Pala Building</p>
+              <p><strong>Warehouse 2:</strong> Shop No. 310-B, Third Floor, Pala Building</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="slide-in-right">
+          <div class="bg-white bg-opacity-10 backdrop-blur-sm p-8 rounded-2xl">
+            <h4 class="text-2xl font-bold mb-6">Send us a Message</h4>
+            <form class="space-y-6">
+              <div class="grid md:grid-cols-2 gap-4">
+                <div>
+                  <label class="block text-blue-100 mb-2">Name</label>
+                  <input type="text" class="w-full px-4 py-3 rounded-lg bg-white bg-opacity-20 border border-white border-opacity-30 text-white placeholder-blue-200 focus:outline-none focus:ring-2 focus:ring-blue-300" placeholder="Your Name">
+                </div>
+                <div>
+                  <label class="block text-blue-100 mb-2">Phone</label>
+                  <input type="tel" class="w-full px-4 py-3 rounded-lg bg-white bg-opacity-20 border border-white border-opacity-30 text-white placeholder-blue-200 focus:outline-none focus:ring-2 focus:ring-blue-300" placeholder="Your Phone">
+                </div>
+              </div>
+              <div>
+                <label class="block text-blue-100 mb-2">Email</label>
+                <input type="email" class="w-full px-4 py-3 rounded-lg bg-white bg-opacity-20 border border-white border-opacity-30 text-white placeholder-blue-200 focus:outline-none focus:ring-2 focus:ring-blue-300" placeholder="Your Email">
+              </div>
+              <div>
+                <label class="block text-blue-100 mb-2">Equipment Interest</label>
+                <select class="w-full px-4 py-3 rounded-lg bg-white bg-opacity-20 border border-white border-opacity-30 text-white focus:outline-none focus:ring-2 focus:ring-blue-300">
+                  <option value="">Select Equipment</option>
+                  <option value="mri">MRI</option>
+                  <option value="ct">CT Scan</option>
+                  <option value="cathlab">Cathlab</option>
+                  <option value="ultrasound">Ultrasound</option>
+                  <option value="xray">X-Ray</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+              <div>
+                <label class="block text-blue-100 mb-2">Message</label>
+                <textarea rows="4" class="w-full px-4 py-3 rounded-lg bg-white bg-opacity-20 border border-white border-opacity-30 text-white placeholder-blue-200 focus:outline-none focus:ring-2 focus:ring-blue-300" placeholder="Tell us about your requirements..."></textarea>
+              </div>
+              <button type="submit" class="w-full bg-white text-[#0A2F73] px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transform hover:scale-105 transition-all duration-300">
+                Send Message
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="bg-[#0A2F73] text-white text-center py-6 mt-10">
-    <p>&copy; 2025 SK Medical Services. All rights reserved.</p>
+  <footer class="bg-[#0A2F73] text-white py-12">
+    <div class="container mx-auto px-6">
+      <div class="grid md:grid-cols-4 gap-8 mb-8">
+        <div>
+          <h4 class="text-xl font-bold mb-4">
+            <span class="text-white">SK</span>
+            <span class="text-[#2A72B5]">Medical</span>
+          </h4>
+          <p class="text-blue-200 text-sm leading-relaxed">
+            Trusted provider of refurbished medical diagnostic equipment with expert service support across Maharashtra since 2017.
+          </p>
+        </div>
+        
+        <div>
+          <h5 class="font-bold mb-4">Equipment</h5>
+          <ul class="space-y-2 text-sm text-blue-200">
+            <li><a href="#equipment" class="hover:text-white transition-colors">MRI Systems</a></li>
+            <li><a href="#equipment" class="hover:text-white transition-colors">CT Scanners</a></li>
+            <li><a href="#equipment" class="hover:text-white transition-colors">Cathlab</a></li>
+            <li><a href="#equipment" class="hover:text-white transition-colors">Ultrasound</a></li>
+            <li><a href="#equipment" class="hover:text-white transition-colors">X-Ray Systems</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h5 class="font-bold mb-4">Services</h5>
+          <ul class="space-y-2 text-sm text-blue-200">
+            <li><a href="#services" class="hover:text-white transition-colors">Equipment Sales</a></li>
+            <li><a href="#services" class="hover:text-white transition-colors">Installation</a></li>
+            <li><a href="#services" class="hover:text-white transition-colors">Maintenance</a></li>
+            <li><a href="#services" class="hover:text-white transition-colors">Training</a></li>
+            <li><a href="#services" class="hover:text-white transition-colors">Spare Parts</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h5 class="font-bold mb-4">Contact</h5>
+          <div class="space-y-2 text-sm text-blue-200">
+            <p>Ambernath (W), Thane - 421505</p>
+            <p><a href="mailto:medicalservicessk@gmail.com" class="hover:text-white transition-colors">medicalservicessk@gmail.com</a></p>
+            <p><a href="tel:+918956914346" class="hover:text-white transition-colors">+91 8956914346</a></p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="border-t border-blue-800 pt-8 text-center">
+        <p class="text-blue-200 text-sm">&copy; 2025 SK Medical Services. All rights reserved. | PCPNDT Import Export Permits</p>
+      </div>
+    </div>
   </footer>
+
+  <!-- Floating Action Button -->
+  <a href="#contact" class="fab bg-[#2A72B5] text-white p-4 rounded-full shadow-2xl hover:bg-[#0A2F73] transition-colors duration-300">
+    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/>
+    </svg>
+  </a>
+
+  <!-- JavaScript -->
+  <script>
+    // Mobile Menu Toggle
+    function toggleMobileMenu() {
+      const mobileMenu = document.getElementById('mobileMenu');
+      mobileMenu.classList.toggle('open');
+    }
+
+    // Intersection Observer for Animations
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, observerOptions);
+
+    // Observe all animation elements
+    document.addEventListener('DOMContentLoaded', function() {
+      const animatedElements = document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right, .scale-in');
+      animatedElements.forEach(el => observer.observe(el));
+      
+      // Smooth scrolling for navigation links
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            const headerOffset = 80;
+            const elementPosition = target.getBoundingClientRect().top;
+            const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+            window.scrollTo({
+              top: offsetPosition,
+              behavior: 'smooth'
+            });
+            
+            // Close mobile menu if open
+            const mobileMenu = document.getElementById('mobileMenu');
+            mobileMenu.classList.remove('open');
+          }
+        });
+      });
+      
+      // Form submission
+      const contactForm = document.querySelector('form');
+      if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+          e.preventDefault();
+          
+          // Get form data
+          const formData = new FormData(this);
+          const data = Object.fromEntries(formData);
+          
+          // Simple validation
+          if (!data.name || !data.email || !data.message) {
+            alert('Please fill in all required fields.');
+            return;
+          }
+          
+          // Here you would typically send the data to your server
+          alert('Thank you for your message! We will get back to you soon.');
+          this.reset();
+        });
+      }
+      
+      // Add loading animation to buttons
+      document.querySelectorAll('button[type="submit"]').forEach(button => {
+        button.addEventListener('click', function() {
+          const originalText = this.textContent;
+          this.textContent = 'Sending...';
+          this.disabled = true;
+          
+          setTimeout(() => {
+            this.textContent = originalText;
+            this.disabled = false;
+          }, 2000);
+        });
+      });
+      
+      // Navbar background on scroll
+      window.addEventListener('scroll', function() {
+        const header = document.querySelector('header');
+        if (window.scrollY > 100) {
+          header.classList.add('bg-opacity-100');
+          header.classList.remove('bg-opacity-95');
+        } else {
+          header.classList.add('bg-opacity-95');
+          header.classList.remove('bg-opacity-100');
+        }
+      });
+    });
+
+    // Performance optimization: Preload critical resources
+    const preloadLinks = [
+      'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap'
+    ];
+    
+    preloadLinks.forEach(href => {
+      const link = document.createElement('link');
+      link.rel = 'preload';
+      link.as = 'style';
+      link.href = href;
+      document.head.appendChild(link);
+    });
+  </script>
 
 </body>
 </html>
