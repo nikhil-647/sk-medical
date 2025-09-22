@@ -1,0 +1,16 @@
+{
+    "name": "SK Medical Services",
+    "short_name": "SK Medical",
+    "description": "Premium Refurbished Medical Equipment - MRI, CT Scan, Ultrasound",
+    "icons": [
+        {
+            "src": "favicon.svg",
+            "sizes": "any",
+            "type": "image/svg+xml"
+        }
+    ],
+    "theme_color": "#0A2F73",
+    "background_color": "#ffffff",
+    "display": "standalone",
+    "start_url": "/"
+}
